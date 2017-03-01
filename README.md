@@ -25,3 +25,7 @@ Work faster and better by collaborating in real-time. Seamlessly collaborate you
 - Socket.io library for bidirectional connection between peers
 - NodeJS for handling backend.
 - Express JS for creating REST service
+
+####Refer To below image to see the design
+
+http://codewithsam.com/img/board.png
