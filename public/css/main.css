@@ -1,0 +1,451 @@
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+body{
+	background-color: #f0e8d8;
+}
+
+
+/***********index********/
+.small-header{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #020202;
+	background-color: #15232D;
+}
+.toolbox{
+	width: 100%;
+	height: 62px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border-bottom: 1px solid #dfdeaa;
+	padding: 0px 20px 0px 20px;
+	z-index: 10;
+	display: block;
+}
+.toolbox>ul{
+	list-style: none outside none;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+}
+.toolbox>ul>div.line-break-vertical{
+	border: 1px solid #e4e4e4;
+	width: 1px;
+	height: 50px;
+	display: inline-block;
+	margin-left: 10px;
+}
+.toolbox>ul>div.line-break-vertical + li{
+	margin-left: 40px;
+}
+.toolbox>ul>div.line-break-vertical + input{
+	margin-left: 40px;
+}
+.toolbox>ul>li.lel{
+	background-color: #eeeeee;
+	border: 1px solid #dddddd;
+	width: 40px  !important;
+	height: 40px  !important;
+	border-radius: 6px;
+	padding: 8px;
+	cursor: pointer;
+	position: relative;
+	margin-right: 14px;
+	display: inline-block;
+}
+.toolbox>ul>li:hover{
+	box-shadow: -2px -2px 4px #bbb inset, 2px 2px 4px #bbb inset;
+}
+.toolbox>ul>li>div.iconpack{
+	background-image: url(../img/iconkit.png);
+	width: 22px;
+	height: 22px;
+}
+.toolbox>ul>li>div.dropdown{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 20;
+	left: 0px;
+	top: 0px;
+}
+.toolbox>ul>li>div.dropdown>ul{
+	background: #eeeeee; /* Old browsers */
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+.toolbox>ul>li>div.dropdown>ul>li>a{
+	width: 100%;
+	height: 100%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.dropicondiv{
+	width: 100%;
+	height: 100%;
+	z-index: 21;
+	opacity: 0;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.iconkitsave{
+	background-position: -10px -10px;
+}
+.iconkitsetting{
+	background-position: -131px -86px;
+}
+.iconkitstore{
+	background-position: -92px -88px;
+}
+.iconkitfile{
+	background-position: -131px -10px;
+}
+.iconkitundo{
+	background-position: -252px -10px;
+
+}
+.iconkitredo{
+	background-position: -291px -10px;
+
+}
+.iconkitdelete{
+	background-position: -331px -10px;
+
+}
+.iconkitcursor{
+	background-position: -11px -50px;
+
+}
+.iconkitpencil{
+	background-position: -50px -51px;
+
+}
+.iconkitline{
+	background-position: -211px -49px;
+
+}
+.iconkittext{
+	background-position: -90px -49px;
+
+}
+.iconkitshape{
+	background-position: -253px -51px;
+
+}
+.wrapper{
+	background-color: #f0e8d8;
+	z-index: -2;
+}
+.wrapper{
+	padding: 8px;
+}
+.canvascontainer{
+	height: 508px;
+	background-color: #ffffff;
+	box-shadow: 1px 1px 3px #cccccc, -1px -1px 3px #cccccc;
+	padding: 0px;
+	position: relative;
+}
+/*.pencildroptoolsetting{
+	width: 150px;
+	height: 30px;
+	background-color: #ffffff;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 22;
+	border: 1px solid #eeeeee;
+	padding: 2px;
+}
+.pencildroptoolsetting>ul{
+	list-style: none outside none;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+.pencildroptoolsetting>ul>li:first-child{
+	display: inline-block;
+	width: 25px;
+	height: 100%;
+}
+.pencildroptoolsetting>ul>li:last-child{
+	display: inline-block;
+	width: 110px;
+	height: 100%;
+
+	opacity: 0.5;
+}
+.pdts-color{
+	background-color: #000000;
+	width: 100%;
+	height: 100%;
+}*/
+.toolpencilsetting{
+	min-width: 400px;
+	min-height: 200px;
+	background: #ffffff;
+}
+.toolpencilsetting>li>ul{
+	list-style: none outside none;
+	padding: 0px;
+	margin: 0px;
+}
+.toolpencilsetting>li{
+	float: left;
+	margin-right: 20px;
+}
+.toolpencilsetting>li:first-child{
+	width: 115px;
+	height: 100%;
+}
+.tpens-colorset{
+	width: 100px;
+	padding-left: 10px;
+	z-index: 23;
+}
+.tpens-colorset>ul>li{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+}
+.black{
+	background-color: #000000;
+}
+.red{
+	background-color: #8B0000;
+}
+.blue{
+	background-color: #0000FF;
+}
+.green{
+	background-color: #008000;
+}
+.orange{
+	background-color: #FFA500;
+}
+.white{
+	background-color: #FFFFFF;
+}
+.pink{
+	background-color: #FFC0CB;
+}
+.yellow{
+	background-color: #FFFF00;
+}
+.brown{
+	background-color: #b68d4c;
+}
+.grey{
+	background-color: #cccccc;
+}
+.tpens-thickset{
+	width: 225px;
+}
+.tpens-thickset>ul{
+	list-style: none outside none;
+	padding: 0px;
+	margin: 0px;
+}
+.tpens-thickset>ul>li{
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	padding-top: 20px;
+}
+.tpens-thickset>ul>li>span.thick1{
+	display: block;
+	border: 1px solid #000000;
+}
+.tpens-thickset>ul>li>span.thick3{
+	display: block;
+	border: 3px solid #000000;
+}
+.tpens-thickset>ul>li>span.thick5{
+	display: block;
+	border: 5px solid #000000;
+}
+.tpens-thickset>ul>li>span.thick7{
+	display: block;
+	border: 7px solid #000000;
+}
+.tpens-thickset>ul>li>span.thick10{
+	display: block;
+	border: 10px solid #000000;
+}
+.userlist{
+	padding: 0px 7px;
+}
+.currentusersbox{
+	background-color: #f6f3ef;
+	border: 1px solid #dbd4c9;
+	font-style: 12px;
+	box-shadow: -1px 1px 1px #edebe7 inset;
+}
+.currentusersbox>ul{
+	list-style: none outside none;
+	margin: 0px;
+	padding: 10px;
+}
+.currentusersbox>ul>li{
+	font-family: ariel, sans-serif;
+	color: #56595f;
+	text-transform: capitalize;
+	padding-left: 8px;
+}
+.currentusersbox>ul>li>span{
+	font-weight: bold;
+	font-size: 10px;
+	color: #777777;
+}
+.whichuserwriting{
+	display: none;
+}
+.uploadpdfbutton{
+	background-color: #f6f3ef;
+	border: 1px solid #dbd4c9;
+	min-height: 50px;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+.heaedcub{
+	padding: 4px 0px 4px 4px;
+	font-weight: bold;
+	color: #6c88bb;
+}
+.uploadpdfbutton>button{
+	margin-top: 20px;
+	margin-left:28%;
+}
+.connectionstatus{
+	padding:10px;
+	color: #005502;
+	background-color: #f6f3ef;
+	border: 1px solid #dbd4c9;
+	min-height: 50px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	position: relative;
+}
+.connectionstatus>span{
+	color: #777777;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	font-size: 9px;
+	font-weight: bold;
+}
+
+.thickitup{
+	height: 20px;
+	background-color: #eeeeee;
+	border: 1px solid #dddddd;
+	width: 80px  !important;
+	height: 40px  !important;
+	border-radius: 6px;
+	padding: 8px;
+	cursor: pointer;
+	position: relative;
+	margin-right: 14px;
+	display: inline-block;
+}
+.thickbackit{
+	width: 100%;
+	height: 20px;
+	background-color: #000;
+}
+.iconkitthickness{
+	width: 60px;
+	background-color: #000000;
+}
+.toolthicksetting{
+	min-width: 150px;
+	min-height: 100px;
+	background: #ffffff;
+}
+.thickbar-thickset>ul{
+	padding: 0px;
+	margin: 0px;
+}
+.thickbar-thickset>ul>li{
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+.thickbar-thickset>ul>li>span.thick1{
+	display: block;
+	border-bottom: 1px solid #000000;
+}
+.thickbar-thickset>ul>li>span.thick3{
+	display: block;
+	border-bottom: 3px solid #000000;
+}
+.thickbar-thickset>ul>li>span.thick5{
+	display: block;
+	border-bottom: 5px solid #000000;
+}
+.thickbar-thickset>ul>li>span.thick7{
+	display: block;
+	border-bottom: 7px solid #000000;
+}
+.thickbar-thickset>ul>li>span.thick10{
+	display: block;
+	border-bottom: 10px solid #000000;
+}
+.thickborder{
+	padding: 2px;
+	height: 24px;
+}
+.thickborder:hover{
+	background-color: #ccc;
+}
+.toolthicksetting>li.thick2>span{
+	border: 1px solid #000000;
+	display: block;
+	width: 100%;
+}
+.toolthicksetting>li.thick6>span{
+	border: 2px solid #000000;
+	display: block;
+	width: 100%;
+}
+.toolthicksetting>li.thick12>span{
+	border: 3px solid #000000;
+	display: block;
+	width: 100%;
+}
+.toolthicksetting>li.thick18>span{
+	border: 4px solid #000000;
+	display: block;
+	width: 100%;
+}
+.toolthicksetting>li.thick24>span{
+	border: 5px solid #000000;
+	display: block;
+	width: 100%;
+}

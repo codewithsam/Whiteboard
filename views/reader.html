@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>PDF Reader</title>
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+	<script type="text/javascript">
+		window.pdfsession = "{{ session }}";
+		window.pdfusername = "{{ uniqueuser }}";
+		window.pdfuserrole = "{{ userrole }}";
+		window.pdfurlname = "{{ pdfname }}";
+	</script>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="https://raw.githubusercontent.com/mozilla/pdf.js/gh-pages/build/pdf.js"></script>
+	<!--<script type="text/javascript" src="/js/readerConnect.js"></script>-->
+	<script type="text/javascript" src="/js/readerConTest.js"></script>
+	<style type="text/css">
+	#cursors{
+		position:relative;
+	}
+
+	#cursors .cursor{
+		position:absolute;
+		width:15px;
+		height:22px;
+		background:url('/img/pointer.png') no-repeat -4px 0;
+
+	}
+	/*.active{
+		background-color: #eee;
+	}*/
+</style>
+</head>
+<body>
+<div id="cursors"></div>
+		<button id="pen" style="position:absolute;left:100px;top:20px;" disabled>Pen</button>
+		<button id="eraser" style="position:absolute;right: 100px;top: 20px;">Eraser</button>
+	<div style="clear:both;"></div>
+	<canvas id="canvas" width="1080" height="800" style="margin-left:-8px;margin-top:-8px;"></canvas>
+	<div class="buttonfunctions">
+		<div class="navigators" style="text-align: center;">
+			<button id="previous"> <<< </button>
+			<button id="next"> >>> </button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			$('#pen').click(function(){
+				$(this).attr('disabled','disabled');
+				$('#eraser').removeAttr('disabled');
+			});
+			$('#eraser').click(function() {
+				$(this).attr('disabled', 'disabled');
+				$('#pen').removeAttr('disabled');
+			});
+		});
+	</script>
+</body>
+</html>

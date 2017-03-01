@@ -1,0 +1,18 @@
+{
+  "name": "nodeboard",
+  "version": "1.0.0",
+  "description": "This is a realtime node based whiteboard",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam <techrust.com@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3",
+    "hbs": "^3.0.1",
+    "mysql": "^2.6.2",
+    "node-static": "^0.7.6",
+    "socket.io": "^0.9.17"
+  }
+}
